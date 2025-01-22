@@ -1,14 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('sliderModal');
+    const openBtn = document.getElementById('openSliderBtn');
+    const closeBtn = document.querySelector('.close');
     const sliderBackground = document.querySelector('.slider-background');
     const textContainer = document.querySelector('.text-container');
     const slideTitle = document.querySelector('.slide-title');
     const slideDescription = document.querySelector('.slide-description');
     const thumbnails = document.querySelectorAll('.thumbnail');
 
-    let currentSlide = 0;
+    let currentThumbnail = 0;
     let isAnimating = false;
 
-    function changeSlide(index) {
+    openBtn.onclick = function() {
+        modal.style.display = 'block';
+        updateSlide(0);
+    }
+
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    function updateSlide(index) {
         if (isAnimating) return;
         isAnimating = true;
 
@@ -21,12 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
         slideTitle.textContent = title;
         slideDescription.textContent = description;
 
-        // Remove active class from all thumbnails
         thumbnails.forEach(thumb => thumb.classList.remove('active'));
-        // Add active class to current thumbnail
         thumbnail.classList.add('active');
 
-        // Animate text
         textContainer.classList.remove('animate');
         void textContainer.offsetWidth; // Trigger reflow
         textContainer.classList.add('animate');
@@ -37,20 +52,15 @@ document.addEventListener('DOMContentLoaded', function() {
             isAnimating = false;
         }, 1500);
 
-        currentSlide = index;
+        currentThumbnail = index;
     }
 
     thumbnails.forEach((thumbnail, index) => {
         thumbnail.addEventListener('click', () => {
-            changeSlide(index);
+            updateSlide(index);
         });
     });
 
     // Set initial slide
-    changeSlide(0);
-
-    // Auto-advance slides every 5 seconds
-    setInterval(() => {
-        changeSlide((currentSlide + 1) % thumbnails.length);
-    }, 5000);
+    updateSlide(0);
 });
