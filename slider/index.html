@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal Slider with Thumbnails</title>
+    <title>Multi-Slide Modal Slider</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,23 +20,52 @@
                         <p class="slide-description"></p>
                     </div>
                 </div>
-                <div class="thumbnail-container">
-                    <div class="thumbnail" data-image="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="Serene Lake" data-description="A tranquil lake surrounded by lush forests and mountains.">
-                        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Nature 1">
+                <div class="slides">
+                    <div class="slide">
+                        <h3 class="slide-category">Nature</h3>
+                        <div class="thumbnail-container">
+                            <div class="thumbnail" data-image="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="Serene Lake" data-description="A tranquil lake surrounded by lush forests and mountains.">
+                                <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Nature 1">
+                            </div>
+                            <div class="thumbnail" data-image="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="Mountain Vista" data-description="A breathtaking view of snow-capped mountains at sunset.">
+                                <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Nature 2">
+                            </div>
+                            <div class="thumbnail" data-image="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="Autumn Path" data-description="A picturesque path through a forest of golden autumn leaves.">
+                                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Nature 3">
+                            </div>
+                        </div>
                     </div>
-                    <div class="thumbnail" data-image="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="Mountain Vista" data-description="A breathtaking view of snow-capped mountains at sunset.">
-                        <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Nature 2">
+                    <div class="slide">
+                        <h3 class="slide-category">Urban</h3>
+                        <div class="thumbnail-container">
+                            <div class="thumbnail" data-image="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="City Skyline" data-description="A stunning view of a modern city skyline at night.">
+                                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Urban 1">
+                            </div>
+                            <div class="thumbnail" data-image="https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="Street Life" data-description="A bustling street scene capturing the essence of urban living.">
+                                <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Urban 2">
+                            </div>
+                            <div class="thumbnail" data-image="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="Urban Park" data-description="A peaceful oasis of green space within a busy city.">
+                                <img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Urban 3">
+                            </div>
+                        </div>
                     </div>
-                    <div class="thumbnail" data-image="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="Autumn Path" data-description="A picturesque path through a forest of golden autumn leaves.">
-                        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Nature 3">
-                    </div>
-                    <div class="thumbnail" data-image="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="City Skyline" data-description="A stunning view of a modern city skyline at night.">
-                        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Urban 1">
-                    </div>
-                    <div class="thumbnail" data-image="https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="Street Life" data-description="A bustling street scene capturing the essence of urban living.">
-                        <img src="https://images.unsplash.com/photo-1444723121867-7a241cacace9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Urban 2">
+                    <div class="slide">
+                        <h3 class="slide-category">Food</h3>
+                        <div class="thumbnail-container">
+                            <div class="thumbnail" data-image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="Gourmet Dish" data-description="An exquisitely plated gourmet meal ready to be savored.">
+                                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Food 1">
+                            </div>
+                            <div class="thumbnail" data-image="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="Fresh Ingredients" data-description="A colorful array of fresh, organic ingredients for cooking.">
+                                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Food 2">
+                            </div>
+                            <div class="thumbnail" data-image="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" data-title="Dessert Delight" data-description="A mouthwatering dessert that's as beautiful as it is delicious.">
+                                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Food 3">
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <button class="slider-nav prev">&lt;</button>
+                <button class="slider-nav next">&gt;</button>
             </div>
         </div>
     </div>
